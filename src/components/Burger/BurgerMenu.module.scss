@@ -1,0 +1,165 @@
+.menu {
+	position: fixed;
+	inset: 0 auto auto 0;
+	z-index: 20;
+
+	display: flex;
+	width: min(720px, 100vw);
+	height: min(720px, 100dvh);
+	padding: 120px 28px 64px;
+	padding-left: 100px;
+	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	background: #fff;
+	box-shadow: 12px 0 32px rgb(0 0 0 / 16%);
+	transform: translateX(-105%);
+	transition: transform 250ms ease;
+}
+
+.menuOpen {
+	transform: translateX(0);
+}
+
+.logoLink {
+	position: absolute;
+	top: 28px;
+	left: 116px;
+	display: block;
+	width: 240px;
+	height: 43px;
+}
+
+.links {
+	display: flex;
+	min-height: 0;
+	margin-bottom: 90px;
+	flex: 0 0 auto;
+	flex-direction: column;
+	overflow: visible;
+
+	a {
+		width: fit-content;
+		padding: 0;
+		border-radius: 8px;
+		color: #302c42;
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 1.27;
+		text-decoration: none;
+		transition: color 200ms ease;
+
+		&:focus-visible {
+			outline: 2px solid #000;
+			outline-offset: 2px;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: rgb(48 44 66 / 70%);
+			}
+		}
+	}
+
+	a:not(:last-child) {
+		margin-bottom: 36px;
+	}
+
+	a:nth-child(n + 3):not(:last-child) {
+		margin-bottom: 32px;
+	}
+}
+
+@media (max-width: 768px), (orientation: landscape) and (max-width: 1024px) {
+	.menu {
+		inset: 0;
+		width: 100%;
+		height: 100dvh;
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.menu {
+		padding: 104px 24px 24px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.logoLink {
+		top: 50px;
+		left: 88px;
+		width: min(240px, calc(100vw - 112px));
+		height: auto;
+		transform: translateY(-50%);
+	}
+
+	.links {
+		min-height: auto;
+		margin-bottom: 40px;
+		overflow: visible;
+
+		a {
+			font-size: 20px;
+		}
+
+		a:not(:last-child),
+		a:nth-child(n + 3):not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.menu {
+		padding-top: 152px;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+
+	.logoLink {
+		top: 96px;
+		left: 24px;
+		width: 180px;
+		height: auto;
+		transform: none;
+	}
+
+	.links {
+		width: 100%;
+		align-items: flex-start;
+
+		a {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-width: 376px) and (max-width: 598px) {
+	.links a {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 375px) {
+	.links a {
+		font-size: 22px;
+	}
+}
+
+@media (max-height: 720px) {
+	.links {
+		a:not(:last-child),
+		a:nth-child(n + 3):not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.menu,
+	.links a {
+		transition: none;
+	}
+}

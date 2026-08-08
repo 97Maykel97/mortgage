@@ -1,0 +1,22 @@
+.header {
+	display: grid;
+	width: 100%;
+	min-height: 720px;
+	grid-template-columns: 586px minmax(0, 1fr);
+	align-items: stretch;
+}
+
+.content {
+	width: 100%;
+	min-width: 0;
+}
+
+@media (max-width: 1200px) {
+	.header {
+		grid-template-columns: 1fr;
+	}
+
+	.header > :first-child {
+		width: 100%;
+	}
+}

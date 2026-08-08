@@ -1,0 +1,18 @@
+.actions {
+	display: flex;
+	width: 520px;
+	max-width: 100%;
+	flex-shrink: 0;
+	gap: 24px;
+	padding-top: 35px;
+	border-top: 1px solid rgb(151 151 151 / 50%);
+}
+
+@media (max-width: 600px) {
+	.actions {
+		width: 100%;
+		padding-top: 24px;
+		flex-direction: column;
+		gap: 16px;
+	}
+}

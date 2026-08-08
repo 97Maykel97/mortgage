@@ -1,0 +1,173 @@
+.section {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	z-index: 20;
+
+	display: grid;
+	width: min(409px, calc(100vw - 32px));
+	height: 168px;
+	padding: 24px 24px 12px;
+	border-radius: 4px;
+	grid-template-columns: minmax(0, 1fr) 64px;
+	gap: 19px;
+
+	background: #fff;
+	box-shadow: 0 18px 50px rgb(52 47 69 / 16%);
+
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(calc(100% + 24px));
+	transition:
+		opacity 500ms ease,
+		transform 500ms ease;
+}
+
+.visible {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+.main {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+}
+
+.quote {
+	display: grid;
+	width: 277px;
+	max-width: 100%;
+	min-height: 65px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid rgb(52 47 69 / 14%);
+	grid-template-columns: 28px minmax(0, 1fr);
+	gap: 16px;
+}
+
+.quoteIcon {
+	display: block;
+	width: 27px;
+	height: 21px;
+}
+
+.quoteText {
+	width: 235px;
+	max-width: 100%;
+	margin-bottom: 11px;
+
+	color: #000;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 200%;
+	opacity: 0.7;
+}
+
+.cta {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.question {
+	margin-right: 14px;
+
+	color: #000;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.2;
+	white-space: nowrap;
+}
+
+.button {
+	display: flex;
+	width: 99px;
+	height: 36px;
+	padding: 10px 27px 11px 24px;
+	border-radius: 4px;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+
+	background: #278fb4;
+	transition:
+		background-color 200ms ease,
+		transform 200ms ease;
+}
+
+.button:hover {
+	background: #207b9b;
+	transform: translateY(-2px);
+}
+
+.button:focus-visible {
+	outline: 3px solid rgb(39 143 180 / 35%);
+	outline-offset: 3px;
+}
+
+.expert {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.imageWrapper {
+	position: relative;
+
+	width: 64px;
+	height: 64px;
+	margin-bottom: 4px;
+	overflow: hidden;
+	border-radius: 50%;
+
+	background: #f6f2ff;
+}
+
+.image {
+	object-fit: cover;
+	object-position: center top;
+}
+
+.author {
+	color: #000;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+}
+
+@media (max-width: 425px) {
+	.section {
+		right: 16px;
+		bottom: 16px;
+
+		height: auto;
+		min-height: 168px;
+		padding: 20px;
+		grid-template-columns: minmax(0, 1fr) 60px;
+		gap: 12px;
+	}
+
+	.imageWrapper {
+		width: 60px;
+		height: 60px;
+	}
+
+	.button {
+		width: 99px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.section,
+	.button {
+		transition: none;
+	}
+}

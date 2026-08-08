@@ -1,0 +1,96 @@
+.button {
+	display: flex;
+	width: 100%;
+	min-height: 60px;
+	padding: 16px 24px;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+
+	border-radius: 4px;
+
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+
+	transition:
+		color 200ms ease,
+		border-color 200ms ease,
+		background-color 200ms ease;
+
+	&:focus-visible {
+		outline: 2px solid #000;
+		outline-offset: 3px;
+	}
+
+	span {
+		flex-shrink: 0;
+		white-space: nowrap;
+	}
+}
+
+.primary {
+	width: 200px;
+	height: 56px;
+
+	justify-content: flex-start;
+	gap: 38px;
+	flex-shrink: 0;
+
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	background: #278fb4;
+
+	span {
+		width: 81px;
+	}
+}
+
+.secondary {
+	width: 181px;
+	height: 56px;
+	min-height: 56px;
+	padding: 18px 32px;
+	flex-shrink: 0;
+
+	color: #342f45;
+	border: 1px solid rgb(52 47 69 / 30%);
+	font-size: 16px;
+	font-weight: 700;
+	background: #fff;
+	padding: 19px 33px;
+
+	span {
+		width: 116px;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.primary:hover {
+		background: #277f9c;
+	}
+
+	.secondary:hover {
+		border-color: #342f45;
+		background: #f5f5f7;
+	}
+}
+
+@media (max-width: 600px) {
+	.primary,
+	.secondary {
+		width: 100%;
+	}
+
+	.primary {
+		justify-content: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.button {
+		transition: none;
+	}
+}

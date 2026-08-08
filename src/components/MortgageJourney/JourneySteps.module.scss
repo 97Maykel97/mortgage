@@ -1,0 +1,218 @@
+.steps {
+	position: relative;
+	display: flex;
+	width: 100%;
+	max-width: 380px;
+	height: 678px;
+	margin: 0;
+	flex-direction: column;
+	gap: 24px;
+
+	&::before {
+		position: absolute;
+		top: 135px;
+		bottom: 135px;
+		left: -31px;
+		width: 1px;
+		background: repeating-linear-gradient(
+			to bottom,
+			rgb(52 47 69 / 22%) 0,
+			rgb(52 47 69 / 22%) 3px,
+			transparent 3px,
+			transparent 10px
+		);
+		content: '';
+	}
+}
+
+.step {
+	position: relative;
+	display: block;
+}
+
+.marker {
+	position: absolute;
+	top: 50%;
+	left: -40px;
+	z-index: 1;
+	display: block;
+	width: 18px;
+	height: 18px;
+	border: 2px solid rgb(52 47 69 / 20%);
+	border-radius: 50%;
+	background: #fff;
+	transform: translateY(-50%);
+	transition:
+		border-color 200ms ease,
+		background-color 200ms ease,
+		box-shadow 200ms ease;
+}
+
+.markerActive {
+	border-color: #278fb4;
+	background: #278fb4;
+	box-shadow: 0 0 0 8px rgb(39 143 180 / 16%);
+}
+
+.card {
+	display: flex;
+	width: 100%;
+	max-width: 380px;
+	height: 210px;
+	min-height: 210px;
+	padding: 28px 40px;
+	border: 1px solid rgb(52 47 69 / 14%);
+	border-radius: 4px;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	background: #fff;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 5%);
+	cursor: pointer;
+	transition:
+		transform 200ms ease,
+		color 200ms ease,
+		border-color 200ms ease,
+		background-color 200ms ease,
+		box-shadow 200ms ease;
+
+	&:focus-visible {
+		outline: 3px solid rgb(39 143 180 / 35%);
+		outline-offset: 4px;
+	}
+}
+
+.number {
+	margin-bottom: 18px;
+
+	color: #278fb4;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+}
+
+.title {
+	color: #342f45;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.divider {
+	display: block;
+	width: 40px;
+	height: 1px;
+	margin: 20px 0 18px;
+	background: rgb(52 47 69 / 14%);
+}
+
+.description {
+	display: block;
+	width: 296px;
+	color: rgb(0 0 0 / 50%);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.71;
+}
+
+.cardActive {
+	border-color: #278fb4;
+	color: #fff;
+	background: #278fb4;
+	box-shadow: 0 12px 30px rgb(39 143 180 / 20%);
+	transform: translateX(27px);
+
+	.number,
+	.title,
+	.description {
+		color: #fff;
+	}
+
+	.number,
+	.description {
+		opacity: 0.65;
+	}
+
+	.divider {
+		background: rgb(255 255 255 / 24%);
+	}
+}
+
+@media (max-width: 768px) {
+	.steps {
+		height: auto;
+		gap: 24px;
+
+		&::before {
+			top: 115px;
+			bottom: 115px;
+			left: -33px;
+		}
+	}
+
+	.marker {
+		width: 14px;
+		height: 14px;
+	}
+
+	.card {
+		height: 230px;
+		min-height: 230px;
+		padding: 32px;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 425px) {
+	.steps {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.steps::before,
+	.marker {
+		display: none;
+	}
+
+	.step {
+		display: block;
+		width: 100%;
+		min-width: 0;
+	}
+
+	.card {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+		height: auto;
+		min-height: 210px;
+		padding: 28px 24px;
+	}
+
+	.cardActive {
+		transform: none;
+	}
+
+	.title {
+		font-size: 26px;
+	}
+
+	.divider {
+		margin: 20px 0;
+	}
+
+	.description {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.marker,
+	.card {
+		transition: none;
+	}
+}
