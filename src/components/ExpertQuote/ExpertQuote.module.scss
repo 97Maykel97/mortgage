@@ -165,6 +165,43 @@
 	}
 }
 
+@media (max-width: 375px) {
+	.section {
+		padding: 16px;
+		grid-template-columns: minmax(0, 1fr) 52px;
+		gap: 8px;
+	}
+
+	.quote {
+		grid-template-columns: 24px minmax(0, 1fr);
+		gap: 10px;
+	}
+
+	.quoteIcon {
+		width: 24px;
+		height: auto;
+	}
+
+	.question {
+		margin-right: 8px;
+		font-size: 11px;
+	}
+
+	.button {
+		width: 92px;
+		padding: 10px 18px;
+	}
+
+	.imageWrapper {
+		width: 52px;
+		height: 52px;
+	}
+
+	.author {
+		font-size: 10px;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.section,
 	.button {

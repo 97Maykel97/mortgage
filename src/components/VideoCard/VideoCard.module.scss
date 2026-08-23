@@ -137,7 +137,13 @@
 	}
 
 	.title {
+		width: min(278px, 100%);
+		min-height: 0;
 		margin-bottom: 16px;
+
+		font-size: 16px;
+		line-height: 1.25;
+		overflow-wrap: anywhere;
 	}
 
 	.playButton {

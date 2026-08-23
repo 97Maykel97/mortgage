@@ -1,0 +1,160 @@
+.card {
+	width: var(--review-card-width, 479px);
+	height: 310px;
+	padding: 24px 38px 28px 32px;
+	border-radius: 4px;
+	flex-shrink: 0;
+
+	background: #fff;
+}
+
+.header {
+	display: flex;
+	margin-bottom: 24px;
+	align-items: center;
+}
+
+.imageWrapper {
+	position: relative;
+
+	width: 110px;
+	height: 110px;
+	overflow: hidden;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.image {
+	object-fit: cover;
+}
+
+.customerInfo {
+	margin-left: 20px;
+}
+
+.location {
+	margin-bottom: 9px;
+
+	color: #278fb4;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+}
+
+.nameRow {
+	display: flex;
+	margin-bottom: 8px;
+	align-items: center;
+	gap: 11px;
+}
+
+.name {
+	color: #342f45;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.companyLogo {
+	display: block;
+	flex-shrink: 0;
+}
+
+.role {
+	color: rgb(0 0 0 / 50%);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background: rgb(151 151 151 / 20%);
+	margin-bottom: 30px;
+}
+
+.review {
+	display: flex;
+	align-items: flex-start;
+}
+
+.quoteIcon {
+	display: block;
+	margin-right: 29px;
+	flex-shrink: 0;
+
+	transform: translateY(3px);
+}
+
+.reviewText {
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.71;
+	opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+	.card {
+		height: auto;
+		min-height: 220px;
+		padding: 20px 20px 24px;
+	}
+
+	.header {
+		margin-bottom: 20px;
+	}
+
+	.imageWrapper {
+		width: 80px;
+		height: 80px;
+	}
+
+	.customerInfo {
+		min-width: 0;
+		margin-left: 16px;
+	}
+
+	.location {
+		margin-bottom: 7px;
+
+		font-size: 9px;
+	}
+
+	.nameRow {
+		margin-bottom: 7px;
+		gap: 8px;
+	}
+
+	.name {
+		font-size: 22px;
+		overflow-wrap: anywhere;
+	}
+
+	.companyLogo {
+		width: 18px;
+		height: auto;
+	}
+
+	.divider {
+		margin-bottom: 20px;
+	}
+
+	.review {
+		padding: 0 8px;
+	}
+
+	.quoteIcon {
+		width: 24px;
+		height: auto;
+		margin-right: 18px;
+	}
+
+	.reviewText {
+		font-size: 13px;
+		line-height: 1.5;
+	}
+}

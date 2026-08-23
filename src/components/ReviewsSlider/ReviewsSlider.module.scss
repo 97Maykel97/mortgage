@@ -1,0 +1,237 @@
+.slider {
+	position: relative;
+
+	width: 100%;
+	min-width: 0;
+	height: 291px;
+	border-radius: 4px 0 0 4px;
+	flex: 1;
+
+	background: #126893;
+}
+
+.controlPanel {
+	display: contents;
+}
+
+.counter {
+	position: absolute;
+	top: 29px;
+	left: 61px;
+	z-index: 2;
+
+	display: flex;
+	align-items: baseline;
+
+	color: #fff;
+	line-height: 1;
+	transform: translateX(-50%);
+}
+
+.currentNumber {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.totalNumber {
+	color: rgb(255 255 255 / 50%);
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.controls {
+	position: absolute;
+	bottom: 32px;
+	left: 31px;
+	z-index: 2;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.controlButton {
+	position: relative;
+
+	display: flex;
+	width: 60px;
+	height: 60px;
+	padding: 8px;
+	border: 0;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+
+	background: rgb(255 255 255 / 40%);
+	color: #278fb4;
+	font-size: 24px;
+	cursor: pointer;
+	transition:
+		background-color 200ms ease,
+		transform 200ms ease;
+}
+
+.controlButton:hover {
+	background: rgb(255 255 255 / 60%);
+	transform: scale(1.05);
+}
+
+.controlButton:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+.controlButton:active {
+	transform: scale(0.97);
+}
+
+.controlButton::before {
+	position: absolute;
+	inset: 8px;
+
+	border-radius: 50%;
+
+	background: #fff;
+	content: '';
+}
+
+.arrow {
+	position: relative;
+	z-index: 1;
+
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+.viewport {
+	width: calc(100% - 122px);
+	margin-left: 122px;
+	overflow-x: clip;
+	overflow-y: visible;
+
+	transform: translateY(-102px);
+}
+
+.track {
+	display: flex;
+	gap: 24px;
+
+	transition: transform 400ms ease;
+	will-change: transform;
+}
+
+.pagination {
+	position: absolute;
+	bottom: 26px;
+	left: calc(50% + 61px);
+	z-index: 2;
+
+	display: flex;
+	width: min(556px, calc(100% - 122px));
+	align-items: center;
+	justify-content: center;
+	gap: 48px;
+
+	transform: translateX(-50%);
+}
+
+.paginationDot {
+	display: block;
+	width: 12px;
+	height: 12px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	flex-shrink: 0;
+
+	background: #278fb4;
+	cursor: pointer;
+	transition:
+		background-color 200ms ease,
+		box-shadow 200ms ease,
+		transform 200ms ease;
+}
+
+.paginationDot:hover {
+	background: #fff;
+	transform: scale(1.15);
+}
+
+.paginationDot:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 4px;
+}
+
+.activeDot {
+	background: #fff;
+	box-shadow: 0 0 0 3px rgb(255 255 255 / 30%);
+}
+
+@media (max-width: 768px) {
+	.pagination {
+		gap: 32px;
+	}
+}
+
+@media (max-width: 600px) {
+	.slider {
+		--review-card-width: calc(100vw - 38px);
+
+		display: flex;
+		height: auto;
+		padding-bottom: 20px;
+		border-radius: 4px;
+		flex-direction: column;
+	}
+
+	.viewport {
+		order: 1;
+
+		width: 100%;
+		margin-bottom: -78px;
+		margin-left: 0;
+
+		transform: translateY(-102px);
+	}
+
+	.track {
+		padding-left: 0;
+	}
+
+	.controlPanel {
+		position: static;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		order: 2;
+
+		transform: none;
+	}
+
+	.counter {
+		display: none;
+	}
+
+	.controls {
+		position: static;
+
+		flex-direction: row;
+		gap: 16px;
+
+		transform: none;
+	}
+
+	.pagination {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.controlButton,
+	.paginationDot,
+	.track {
+		transition: none;
+	}
+}

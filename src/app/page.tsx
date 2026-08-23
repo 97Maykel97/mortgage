@@ -1,3 +1,4 @@
+import CustomerReviews from '@/components/CustomerReviews';
 import Header from '@/components/Header';
 import MortgageJourney from '@/components/MortgageJourney';
 import MortgageTeam from '@/components/MortgageTeam';
@@ -8,6 +9,7 @@ export default function Home() {
 			<Header />
 			<MortgageTeam />
 			<MortgageJourney />
+			<CustomerReviews />
 		</main>
 	);
 }

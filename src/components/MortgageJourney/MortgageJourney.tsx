@@ -50,6 +50,7 @@ function MortgageJourney() {
 					image='/justin.png'
 					buttonHref='#'
 					triggerId='journey'
+					hideTriggerId='customer-reviews'
 				/>
 			</Container>
 		</section>

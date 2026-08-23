@@ -11,6 +11,7 @@ type TExpertQuoteProps = {
 	author: string;
 	image: string;
 	triggerId: string;
+	hideTriggerId?: string;
 	question?: string;
 	buttonText?: string;
 	buttonHref?: string;
@@ -21,11 +22,14 @@ function ExpertQuote({
 	author,
 	image,
 	triggerId,
+	hideTriggerId,
 	question = 'Have a question?',
 	buttonText = "Let's talk",
 	buttonHref = '#',
 }: TExpertQuoteProps) {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isTriggerVisible, setIsTriggerVisible] = useState(false);
+	const [isHideTriggerVisible, setIsHideTriggerVisible] = useState(false);
+	const isVisible = isTriggerVisible && !isHideTriggerVisible;
 
 	useEffect(() => {
 		const trigger = document.getElementById(triggerId);
@@ -38,7 +42,7 @@ function ExpertQuote({
 			entries => {
 				const [entry] = entries;
 
-				setIsVisible(entry.isIntersecting);
+				setIsTriggerVisible(entry.isIntersecting);
 			},
 			{
 				threshold: 0.15,
@@ -51,6 +55,30 @@ function ExpertQuote({
 			observer.disconnect();
 		};
 	}, [triggerId]);
+
+	useEffect(() => {
+		if (!hideTriggerId) {
+			return;
+		}
+
+		const hideTrigger = document.getElementById(hideTriggerId);
+
+		if (!hideTrigger) {
+			return;
+		}
+
+		const observer = new IntersectionObserver(entries => {
+			const [entry] = entries;
+
+			setIsHideTriggerVisible(entry.isIntersecting);
+		});
+
+		observer.observe(hideTrigger);
+
+		return () => {
+			observer.disconnect();
+		};
+	}, [hideTriggerId]);
 
 	return (
 		<aside

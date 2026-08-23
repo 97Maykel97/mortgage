@@ -155,3 +155,19 @@
 		row-gap: 20px;
 	}
 }
+
+@media (max-width: 375px) {
+	.video {
+		right: 16px;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.playButton {
+		--play-button-size: 44px;
+	}
+
+	.videoText {
+		font-size: 12px;
+	}
+}
