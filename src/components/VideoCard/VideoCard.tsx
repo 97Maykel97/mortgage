@@ -26,6 +26,8 @@ function VideoCard({
 	const cardClasses = [styles.card, styles[size], className]
 		.filter(Boolean)
 		.join(' ');
+	const [minutes, seconds] = duration.split(':').map(Number);
+	const durationDateTime = `PT${minutes ? `${minutes}M` : ''}${seconds}S`;
 
 	return (
 		<article className={cardClasses}>
@@ -48,7 +50,9 @@ function VideoCard({
 				/>
 
 				<h3 className={styles.title}>{title}</h3>
-				<span className={styles.duration}>{duration}</span>
+				<time className={styles.duration} dateTime={durationDateTime}>
+					{duration}
+				</time>
 			</div>
 		</article>
 	);

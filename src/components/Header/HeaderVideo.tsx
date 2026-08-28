@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import PlayButton from '@/components/PlayButton';
 
-import styles from './HeaderMedia.module.scss';
+import styles from './HeaderVideo.module.scss';
 
-function HeaderMedia() {
+function HeaderVideo() {
 	return (
 		<div className={styles.media}>
 			<Image
@@ -34,4 +34,4 @@ function HeaderMedia() {
 	);
 }
 
-export default HeaderMedia;
+export default HeaderVideo;

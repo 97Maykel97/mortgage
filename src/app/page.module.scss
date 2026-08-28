@@ -1,0 +1,14 @@
+.educationResources {
+	display: grid;
+	grid-template-columns: 818px 397px;
+	gap: 24px;
+	margin-top: 122px;
+}
+
+@media (max-width: 1300px) {
+	.educationResources {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+}
+@media (max-width: 900px) { .educationResources { grid-template-columns: 1fr; } }

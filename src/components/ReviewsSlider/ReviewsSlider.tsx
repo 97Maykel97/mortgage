@@ -53,7 +53,10 @@ function ReviewsSlider() {
 		const updateSlideStep = () => {
 			const [firstSlide, secondSlide] = Array.from(track.children);
 
-			if (firstSlide instanceof HTMLElement && secondSlide instanceof HTMLElement) {
+			if (
+				firstSlide instanceof HTMLElement &&
+				secondSlide instanceof HTMLElement
+			) {
 				setSlideStep(secondSlide.offsetLeft - firstSlide.offsetLeft);
 			}
 		};

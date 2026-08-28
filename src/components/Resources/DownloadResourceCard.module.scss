@@ -1,0 +1,107 @@
+.content {
+	display: flex;
+	gap: 24px;
+}
+
+.imageWrapper {
+	width: 96px;
+	height: 120px;
+	flex-shrink: 0;
+}
+
+.imageWrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.label {
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #278fb4;
+}
+
+.resourceTitle {
+	margin-top: 17px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 130%;
+	color: #342f45;
+}
+
+.action {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 16px;
+}
+
+.downloadButton {
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	padding: 12px 15px 15px 29px;
+	width: 160px;
+	height: 60px;
+	border: 0;
+	border-radius: 30px;
+	background: rgb(39 143 180 / 40%);
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.downloadButton:hover {
+	transform: scale(1.03);
+}
+
+.downloadButton::before {
+	content: '';
+	position: absolute;
+	inset: 8px;
+	border-radius: 22px;
+	background: #278fb4;
+}
+
+.downloadButton span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	position: relative;
+	width: auto;
+	height: auto;
+	border-radius: 0;
+	background: transparent;
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+}
+
+.downloadButton img {
+	display: none;
+}
+
+.downloadButton::after {
+	content: '';
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-left: 15px;
+	background: url('/icons/download-arrow.svg') center / contain no-repeat;
+}
+
+
+.divider {
+	width: 100%;
+	height: 1px;
+	margin: 24px 0 0;
+	border: 0;
+	background: rgb(151 151 151 / 20%);
+}

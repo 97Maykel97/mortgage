@@ -1,13 +1,13 @@
 import Container from '@/components/Container';
 
 import HeaderContent from './HeaderContent';
-import HeaderMedia from './HeaderMedia';
+import HeaderVideo from './HeaderVideo';
 import styles from './Header.module.scss';
 
 function Header() {
 	return (
 		<header className={styles.header}>
-			<HeaderMedia />
+			<HeaderVideo />
 			<Container className={styles.content}>
 				<HeaderContent />
 			</Container>

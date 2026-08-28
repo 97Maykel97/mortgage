@@ -1,0 +1,20 @@
+.list {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+	gap: 20px;
+}
+
+.row {
+	flex-direction: row;
+	gap: 24px;
+}
+
+@media (max-width: 900px) {
+	.list {
+		align-items: center;
+		gap: 20px;
+	}
+}

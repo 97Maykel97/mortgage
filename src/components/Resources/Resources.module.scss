@@ -1,0 +1,23 @@
+.section {
+	width: 100%;
+}
+
+.title {
+	margin: 50px 0 20px;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 100%;
+	color: #342f45;
+}
+
+@media (max-width: 1300px) {
+	.section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.title {
+		text-align: center;
+	}
+}
