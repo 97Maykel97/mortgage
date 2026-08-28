@@ -1,5 +1,6 @@
 import CustomerReviews from '@/components/CustomerReviews';
 import Education from '@/components/Education/Education';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MortgageJourney from '@/components/MortgageJourney';
 import MortgageTeam from '@/components/MortgageTeam';
@@ -20,6 +21,7 @@ export default function Home() {
 					<Resources />
 				</div>
 			</Container>
+			<Footer />
 		</main>
 	);
 }
