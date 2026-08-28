@@ -20,6 +20,7 @@ const articles = [
 		author: 'Justin Roberts',
 		authorImage: '/justin-roberts.png',
 		variant: 'default' as const,
+		backgroundImage: undefined,
 	},
 	{
 		id: 3,
@@ -29,6 +30,7 @@ const articles = [
 		author: 'Justin Roberts',
 		authorImage: '/justin-roberts.png',
 		variant: 'default' as const,
+		backgroundImage: undefined,
 	},
 	...Array.from({ length: 7 }, (_, index) => ({
 		id: index + 4,
