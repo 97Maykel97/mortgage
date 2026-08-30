@@ -2,14 +2,18 @@ import ResourcesList from './ResourcesList';
 
 import styles from './Resources.module.scss';
 
-function Resources() {
-	return (
-		<section className={styles.section} aria-labelledby='resources-title'>
-			<h2 id='resources-title' className={styles.title}>
-				Resources
-			</h2>
+type TResourcesProps = {
+	direction?: 'row' | 'column';
+	className?: string;
+	stackOnTablet?: boolean;
+};
 
-			<ResourcesList direction='column' />
+function Resources({ direction = 'column', className = '', stackOnTablet = false }: TResourcesProps) {
+	return (
+		<section className={`${styles.section} ${className}`}>
+			<h2 className={styles.title}>Resources</h2>
+
+			<ResourcesList direction={direction} stackOnTablet={stackOnTablet} className={className} />
 		</section>
 	);
 }

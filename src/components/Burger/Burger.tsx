@@ -8,17 +8,17 @@ import styles from './Burger.module.scss';
 const menuItems: TMenuItem[] = [
 	{
 		id: 'teachers',
-		href: '#teachers',
+		href: '/#teachers',
 		label: 'Your teachers',
 	},
 	{
 		id: 'journey',
-		href: '#journey',
+		href: '/#journey',
 		label: 'Your mortgage journey',
 	},
 	{
 		id: 'reviews',
-		href: '#reviews',
+		href: '/#customer-reviews',
 		label: 'What our customers say',
 	},
 	{

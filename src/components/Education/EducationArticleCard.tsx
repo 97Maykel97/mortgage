@@ -9,6 +9,7 @@ type TEducationArticleCardProps = {
 	authorImage?: string;
 	backgroundImage?: string;
 	variant?: 'featured' | 'default';
+	layout?: 'default' | 'blog';
 };
 
 function EducationArticleCard({
@@ -18,18 +19,17 @@ function EducationArticleCard({
 	authorImage,
 	backgroundImage,
 	variant = 'default',
+	layout = 'default',
 }: TEducationArticleCardProps) {
 	return (
 		<article
-			className={`${styles.card} ${
-				variant === 'featured' ? styles.featured : styles.default
-			}`}
+			className={`${styles.card} ${variant === 'featured' ? styles.featured : styles.default} ${layout === 'blog' ? styles.blogLayout : ''}`}
 		>
 			{variant === 'featured' && backgroundImage && (
 				<Image
 					className={styles.background}
 					src={backgroundImage}
-					alt=''
+					alt={`${title} article image`}
 					fill
 					sizes='818px'
 				/>
@@ -45,7 +45,7 @@ function EducationArticleCard({
 			<div className={styles.author}>
 				<div className={styles.authorImage}>
 					{authorImage && (
-						<Image src={authorImage} alt='' fill sizes='52px' />
+						<Image src={authorImage} alt={author} fill sizes='52px' />
 					)}
 				</div>
 

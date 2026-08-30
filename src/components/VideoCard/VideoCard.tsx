@@ -34,7 +34,7 @@ function VideoCard({
 			<Image
 				className={styles.background}
 				src={imageSrc}
-				alt=''
+				alt={`Illustration for ${title}`}
 				fill
 				sizes='(max-width: 600px) 100vw, 796px'
 				aria-hidden='true'

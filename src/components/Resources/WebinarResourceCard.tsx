@@ -16,7 +16,7 @@ function WebinarResourceCard({
 		<ResourceCard>
 			<div className={styles.content}>
 				<div className={styles.imageWrapper}>
-					{image && <Image src={image} alt='' width={96} height={120} />}
+					{image && <Image src={image} alt={`${title} cover`} width={96} height={120} />}
 				</div>
 				<div className={styles.info}>
 					<p className={styles.label}>Resources</p>
@@ -27,7 +27,7 @@ function WebinarResourceCard({
 			<div className={styles.action}>
 				<button type='button' className={styles.viewButton} aria-label='View webinar'>
 					<span>
-						<img src='/icons/view.svg' alt='' aria-hidden='true' />
+						<Image src='/icons/view.svg' alt='' width={16} height={16} aria-hidden='true' />
 					</span>
 				</button>
 			</div>

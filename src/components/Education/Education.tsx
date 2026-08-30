@@ -46,18 +46,38 @@ const articles = [
 
 type TEducationProps = {
 	limit?: number;
+	variant?: 'default' | 'blog';
 };
 
-function Education({ limit = 3 }: TEducationProps) {
+function Education({ limit = 3, variant = 'default' }: TEducationProps) {
+	const blogOrder = [
+		articles[0],
+		articles[3],
+		articles[1],
+		articles[2],
+		articles[4],
+		articles[5],
+		articles[6],
+		articles[7],
+		articles[8],
+		articles[9],
+	];
+	const displayedArticles = (variant === 'blog' ? blogOrder : articles).slice(
+		0,
+		limit,
+	);
+
 	return (
-		<section className={styles.section} aria-labelledby='education-title'>
+		<section className={`${styles.section} ${variant === 'blog' ? styles.blogLayout : ''}`} aria-labelledby='education-title'>
 			<header className={styles.header}>
 				<h2 id='education-title'>Education</h2>
-				<a href='#articles'>All articles</a>
+				<a href={variant === 'blog' ? '#articles' : '/blog#articles'}>
+					All articles
+				</a>
 			</header>
 
 			<div className={styles.articles} id='articles'>
-				{articles.slice(0, limit).map(article => (
+				{displayedArticles.map(article => (
 					<EducationArticleCard
 						key={article.id}
 						title={article.title}
@@ -66,6 +86,7 @@ function Education({ limit = 3 }: TEducationProps) {
 						authorImage={article.authorImage}
 						backgroundImage={article.backgroundImage}
 						variant={article.variant}
+						layout={variant}
 					/>
 				))}
 			</div>
