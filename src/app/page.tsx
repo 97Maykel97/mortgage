@@ -17,7 +17,7 @@ export default function Home() {
 			<CustomerReviews />
 			<Container>
 				<div className={styles.educationResources}>
-					<Education />
+					<Education showAllArticles />
 					<Resources />
 				</div>
 			</Container>

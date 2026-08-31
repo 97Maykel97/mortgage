@@ -47,9 +47,14 @@ const articles = [
 type TEducationProps = {
 	limit?: number;
 	variant?: 'default' | 'blog';
+	showAllArticles?: boolean;
 };
 
-function Education({ limit = 3, variant = 'default' }: TEducationProps) {
+function Education({
+	limit = 3,
+	variant = 'default',
+	showAllArticles = false,
+}: TEducationProps) {
 	const blogOrder = [
 		articles[0],
 		articles[3],
@@ -71,9 +76,7 @@ function Education({ limit = 3, variant = 'default' }: TEducationProps) {
 		<section className={`${styles.section} ${variant === 'blog' ? styles.blogLayout : ''}`} aria-labelledby='education-title'>
 			<header className={styles.header}>
 				<h2 id='education-title'>Education</h2>
-				<a href={variant === 'blog' ? '#articles' : '/blog#articles'}>
-					All articles
-				</a>
+				{showAllArticles && <a href='/blog#articles'>All articles</a>}
 			</header>
 
 			<div className={styles.articles} id='articles'>
