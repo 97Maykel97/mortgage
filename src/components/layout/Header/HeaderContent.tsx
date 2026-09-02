@@ -1,5 +1,5 @@
-import ButtonLink from '@/components/ButtonLink';
-import Logo from '@/components/Logo';
+import ButtonLink from '@/components/common/ButtonLink';
+import Logo from '@/components/common/Logo';
 
 import styles from './HeaderContent.module.scss';
 

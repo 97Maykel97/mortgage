@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Burger from '@/components/Burger';
+import Burger from '@/components/common/Burger';
 
 import './tailwind.css';
 import './globals.scss';

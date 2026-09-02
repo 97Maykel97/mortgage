@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Logo from '../Logo';
+import Logo from '../../common/Logo';
 import styles from './HeaderBlog.module.scss';
-import Container from '../Container';
+import Container from '../../common/Container';
 
 function HeaderBlog() {
 	return (

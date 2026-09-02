@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Logo from '@/components/Logo';
+import Logo from '@/components/common/Logo';
 
 import styles from './HeaderEbook.module.scss';
-import Container from '../Container';
+import Container from '../../common/Container';
 
 function HeaderEbook() {
 	return (

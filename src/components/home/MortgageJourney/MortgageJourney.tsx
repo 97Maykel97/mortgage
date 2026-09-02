@@ -1,4 +1,4 @@
-import Container from '@/components/Container';
+import Container from '@/components/common/Container';
 import ExpertQuote from '@/components/ExpertQuote';
 import VideoCard from '@/components/VideoCard';
 

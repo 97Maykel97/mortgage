@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import PlayButton from '@/components/PlayButton';
+import PlayButton from '@/components/common/PlayButton';
 
 import SkillItem from './SkillItem';
 import styles from './TeamMemberCard.module.scss';

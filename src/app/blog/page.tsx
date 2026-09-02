@@ -1,7 +1,7 @@
-import HeaderBlog from '@/components/HeaderBlog';
-import Container from '@/components/Container';
+import HeaderBlog from '@/components/blog/HeaderBlog';
+import Container from '@/components/common/Container';
 import Education from '@/components/Education/Education';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 import Resources from '@/components/Resources/Resources';
 import VideoCard from '@/components/VideoCard';
 

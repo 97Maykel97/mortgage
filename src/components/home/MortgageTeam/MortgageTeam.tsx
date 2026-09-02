@@ -1,4 +1,4 @@
-import Container from '@/components/Container';
+import Container from '@/components/common/Container';
 
 import TeamMemberCard from './TeamMemberCard';
 import styles from './MortgageTeam.module.scss';

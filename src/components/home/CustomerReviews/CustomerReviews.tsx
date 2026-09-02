@@ -1,6 +1,6 @@
-import Container from '@/components/Container';
+import Container from '@/components/common/Container';
 import RatingCard from '@/components/RatingCard';
-import ReviewsSlider from '@/components/ReviewsSlider';
+import ReviewsSlider from '@/components/home/ReviewsSlider';
 
 import styles from './CustomerReviews.module.scss';
 

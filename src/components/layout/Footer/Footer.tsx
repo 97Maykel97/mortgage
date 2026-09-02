@@ -1,5 +1,5 @@
-import Logo from '@/components/Logo';
-import Container from '@/components/Container';
+import Logo from '@/components/common/Logo';
+import Container from '@/components/common/Container';
 
 import styles from './Footer.module.scss';
 

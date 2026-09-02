@@ -1,13 +1,13 @@
 .section {
 	position: relative;
-	min-height: 475px;
+	min-height: 360px;
 	background: #fff;
 }
 
 .content {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	min-height: 475px;
+	min-height: 360px;
 }
 
 .info {

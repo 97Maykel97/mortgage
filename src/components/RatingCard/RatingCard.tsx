@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './RatingCard.module.scss';
-import Star from '../Star';
+import Star from '../common/Star';
 
 type TRatingCardProps = {
 	company: 'Google' | 'Zillow';
