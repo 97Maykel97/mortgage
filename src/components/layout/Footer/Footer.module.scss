@@ -45,6 +45,7 @@
 }
 
 .contact p,
+.contact address,
 .contact a,
 .navigation a,
 .legalText p {
@@ -55,6 +56,10 @@
 	line-height: 171%;
 	color: #fff;
 	opacity: 0.7;
+}
+
+.contact address {
+	font-style: normal;
 }
 
 .bottom {

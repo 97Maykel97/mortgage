@@ -12,12 +12,64 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	min-width: 0;
+}
+
+html {
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 body {
 	min-height: 100dvh;
+	max-width: 100%;
 	margin: 0;
 	background: var(--color-background);
 	color: var(--color-main);
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+svg,
+video,
+iframe {
+	max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+	max-width: 100%;
+	font: inherit;
+}
+
+pre,
+code {
+	max-width: 100%;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+table {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	max-width: 100%;
+	overflow-wrap: anywhere;
 }

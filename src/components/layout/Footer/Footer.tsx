@@ -20,7 +20,7 @@ function Footer() {
 			<div className={styles.content}>
 				<div className={styles.contact}>
 					<h2>Contact us</h2>
-					<p>14511 Myford Road, Suite 100, Tustin, CA 92780</p>
+					<address>14511 Myford Road, Suite 100, Tustin, CA 92780</address>
 					<p>800-450-2010</p>
 					<a href='mailto:customerservice@nafic.com'>
 						customerservice@nafic.com

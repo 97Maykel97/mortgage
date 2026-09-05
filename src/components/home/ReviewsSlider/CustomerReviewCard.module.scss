@@ -78,6 +78,7 @@
 
 .review {
 	display: flex;
+	min-width: 0;
 	align-items: flex-start;
 }
 
@@ -90,6 +91,12 @@
 }
 
 .reviewText {
+	min-width: 0;
+	display: -webkit-box;
+	overflow: hidden;
+	overflow-wrap: anywhere;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
 	color: #000;
 	font-size: 14px;
 	font-weight: 400;
@@ -154,6 +161,7 @@
 	}
 
 	.reviewText {
+		-webkit-line-clamp: 6;
 		font-size: 13px;
 		line-height: 1.5;
 	}

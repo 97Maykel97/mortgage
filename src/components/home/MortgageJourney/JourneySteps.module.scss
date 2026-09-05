@@ -108,8 +108,15 @@
 }
 
 .description {
-	display: block;
+	display: -webkit-box;
 	width: 296px;
+	max-width: 100%;
+	min-width: 0;
+	overflow: hidden;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
 	color: rgb(0 0 0 / 50%);
 	font-size: 14px;
 	font-weight: 400;

@@ -114,6 +114,10 @@
 
 .featured .description {
 	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
 	margin-top: 18px;
 	font-weight: 400;
 	font-size: 14px;
@@ -123,7 +127,10 @@
 }
 
 .default .description {
-	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 	margin-top: 18px;
 	font-weight: 400;
 	font-size: 14px;
@@ -196,6 +203,10 @@
 		margin-top: 44px;
 		font-size: 24px;
 		line-height: 115%;
+	}
+
+	.default .description {
+		-webkit-line-clamp: 4;
 	}
 
 	.blogLayout.featured {
