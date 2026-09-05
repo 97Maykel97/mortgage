@@ -1,0 +1,52 @@
+.section {
+	margin-top: 100px;
+}
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 167%;
+	color: #342f45;
+	text-align: center;
+}
+.card {
+	display: flex;
+	gap: 60px;
+}
+.role {
+	margin-top: 126px;
+	font-weight: 700;
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #278fb4;
+}
+.name {
+	margin-top: 7px;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 100%;
+	color: #342f45;
+}
+.divider {
+	margin-top: 21px;
+	width: 40px;
+	height: 1px;
+	background-color: #979797;
+	opacity: 0.2;
+}
+.description {
+	margin-top: 16px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 171%;
+	color: #000;
+	opacity: 0.5;
+	max-width: 349px;
+}
+
+.action {
+	margin-top: 22px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
