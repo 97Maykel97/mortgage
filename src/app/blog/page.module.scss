@@ -16,6 +16,7 @@
 
 .education {
 	margin-top: 90px;
+	padding-bottom: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -44,6 +45,10 @@
 }
 
 @media (max-width: 768px) {
+	.education {
+		padding-bottom: 32px;
+	}
+
 	.blogResources > article {
 		width: min(397px, calc(100vw - 32px));
 		max-width: calc(100vw - 32px);
