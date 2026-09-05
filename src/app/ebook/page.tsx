@@ -1,4 +1,5 @@
 import InfoFormSection from '@/components/common/InfoFormSection';
+import GetStartedSection from '@/components/common/GetStartedSection';
 import HeaderEbook from '@/components/ebook/HeaderEbook';
 import FeaturesSection from '@/components/ebook/FeaturesSection';
 import ProfileSection from '@/components/common/ProfileSection';
@@ -44,6 +45,13 @@ export default function EbookPage() {
 				imageWidth={369}
 				imageHeight={339}
 				buttonText='Meet Justin'
+			/>
+			<GetStartedSection
+				title='Get started with us'
+				description="Rates change, but every mortgage journey starts with a relationship. (Pssst...it's not just about clicking a button)"
+				primaryButtonText='Get started'
+				secondaryButtonText='Schedule a time'
+				image='/get-started-with-us.png'
 			/>
 			<Footer />
 		</main>
