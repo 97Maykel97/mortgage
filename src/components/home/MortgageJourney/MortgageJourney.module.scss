@@ -4,6 +4,9 @@
 }
 
 .title {
+	max-width: 100%;
+	overflow-wrap: break-word;
+	word-break: normal;
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 167%;
@@ -40,8 +43,14 @@
 }
 
 @media (max-width: 1200px) {
+	.section {
+		padding-top: 24px;
+	}
+
 	.title,
 	.text {
+		width: 100%;
+		max-width: 100%;
 		text-align: center;
 	}
 
@@ -72,5 +81,18 @@
 
 	.featuredVideo {
 		grid-column: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.title {
+		padding-inline: 8px;
+		font-size: 30px;
+		line-height: 1.3;
+	}
+
+	.text {
+		padding-inline: 8px;
+		font-size: 16px;
 	}
 }

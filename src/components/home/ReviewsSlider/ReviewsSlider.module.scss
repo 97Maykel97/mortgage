@@ -176,7 +176,7 @@
 
 @media (max-width: 600px) {
 	.slider {
-		--review-card-width: calc(100vw - 38px);
+		--review-card-width: 100%;
 
 		display: flex;
 		height: auto;
@@ -188,9 +188,9 @@
 	.viewport {
 		order: 1;
 
-		width: 100%;
+		width: calc(100% + 8px);
 		margin-bottom: -78px;
-		margin-left: 0;
+		margin-left: -8px;
 
 		transform: translateY(-102px);
 	}
