@@ -1,19 +1,43 @@
 .section {
 	margin-top: 100px;
+	padding-bottom: 40px;
 }
+
 .title {
+	margin: 0;
 	font-weight: 700;
 	font-size: 36px;
-	line-height: 167%;
+	line-height: 1.2;
 	color: #342f45;
 	text-align: center;
 }
+
 .card {
+	margin: 24px auto 0;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 60px;
+	max-width: 900px;
+	padding: 24px 40px 0;
+	background: #fff;
+	box-shadow: 0 10px 20px -8px rgba(24, 57, 70, 0.2);
+	overflow: hidden;
 }
+
+.image {
+	align-self: flex-end;
+	width: auto;
+	max-width: 50%;
+	height: auto;
+}
+
+.info {
+	flex: 1;
+}
+
 .role {
-	margin-top: 126px;
+	margin: 0 0 7px;
 	font-weight: 700;
 	font-size: 11px;
 	letter-spacing: 0.18em;
@@ -21,21 +45,21 @@
 	color: #278fb4;
 }
 .name {
-	margin-top: 7px;
+	margin: 0;
 	font-weight: 700;
 	font-size: 28px;
 	line-height: 100%;
 	color: #342f45;
 }
 .divider {
-	margin-top: 21px;
+	margin: 21px 0 0;
 	width: 40px;
 	height: 1px;
 	background-color: #979797;
 	opacity: 0.2;
 }
 .description {
-	margin-top: 16px;
+	margin: 16px 0 0;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 171%;
@@ -49,4 +73,82 @@
 	display: flex;
 	align-items: center;
 	gap: 16px;
+}
+
+@media (max-width: 1200px) {
+	.card {
+		gap: 40px;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+}
+
+@media (max-width: 992px) {
+	.section {
+		margin-top: 64px;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.card {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 0 24px 24px;
+	}
+
+	.image {
+		margin-top: 20px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.info {
+		width: 100%;
+		text-align: center;
+	}
+
+	.role {
+		margin-top: 0;
+	}
+
+	.description {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.divider {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.action {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 600px) {
+	.section {
+		margin-top: 48px;
+		padding-bottom: 32px;
+	}
+
+	.title {
+		font-size: 26px;
+	}
+
+	.card {
+		gap: 16px;
+		padding: 20px 16px;
+	}
+
+	.image {
+		max-width: 100%;
+	}
+
+	.description {
+		max-width: 100%;
+	}
 }
