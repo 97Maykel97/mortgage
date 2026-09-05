@@ -25,6 +25,7 @@ function EducationArticleCard({
 		<article
 			className={`${styles.card} ${variant === 'featured' ? styles.featured : styles.default} ${layout === 'blog' ? styles.blogLayout : ''}`}
 		>
+			<a className={styles.cardLink} href='/article' aria-label={title} />
 			{variant === 'featured' && backgroundImage && (
 				<Image
 					className={styles.background}

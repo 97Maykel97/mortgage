@@ -76,7 +76,7 @@ function Education({
 		<section className={`${styles.section} ${variant === 'blog' ? styles.blogLayout : ''}`} aria-labelledby='education-title'>
 			<header className={styles.header}>
 				<h2 id='education-title'>Education</h2>
-				{showAllArticles && <a href='/blog#articles'>All articles</a>}
+				{showAllArticles && <a href='/article'>All articles</a>}
 			</header>
 
 			<div className={styles.articles} id='articles'>

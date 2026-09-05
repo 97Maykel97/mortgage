@@ -13,6 +13,14 @@
 		transform 0.2s ease;
 }
 
+.cardLink {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	display: block;
+	cursor: pointer;
+}
+
 .featured {
 	width: 818px;
 	height: 342px;
