@@ -6,12 +6,12 @@
 
 .content {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: var(--info-columns, repeat(2, minmax(0, 1fr)));
 	min-height: 360px;
 }
 
 .info {
-	grid-column: 2;
+	grid-column: var(--info-column, 2);
 	max-width: 720px;
 	padding-top: 40px;
 }

@@ -11,6 +11,7 @@ type InfoFormSectionProps = {
 	author?: string;
 	description: string;
 	buttonText: string;
+	className?: string;
 };
 
 const emailPattern =
@@ -33,6 +34,7 @@ function InfoFormSection({
 	author,
 	description,
 	buttonText,
+	className,
 }: InfoFormSectionProps) {
 	const [error, setError] = useState('');
 	const [success, setSuccess] = useState(false);
@@ -61,7 +63,7 @@ function InfoFormSection({
 	}
 
 	return (
-		<section className={styles.section}>
+		<section className={`${styles.section} ${className ?? ''}`.trim()}>
 			<Container className={styles.content}>
 				<div className={styles.info}>
 					<h2 className={styles.title}>{title}</h2>
