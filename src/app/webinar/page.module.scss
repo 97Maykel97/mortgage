@@ -67,6 +67,12 @@
 	white-space: nowrap;
 }
 
+@media (min-width: 1831px) {
+	.header::after {
+		display: none;
+	}
+}
+
 @media (max-width: 1200px) {
 	.header::after {
 		display: none;
