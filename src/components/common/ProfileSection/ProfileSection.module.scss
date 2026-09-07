@@ -32,6 +32,7 @@
 	height: auto;
 }
 
+
 .info {
 	flex: 1;
 }
@@ -100,7 +101,7 @@
 	}
 
 	.image {
-		margin-top: 20px;
+		align-self: center;
 		max-width: 100%;
 		margin: 0 auto;
 	}
@@ -147,6 +148,7 @@
 	.image {
 		max-width: 100%;
 	}
+
 
 	.description {
 		max-width: 100%;

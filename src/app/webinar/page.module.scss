@@ -85,7 +85,7 @@
 		padding-bottom: 48px;
 	}
 
-	.webinarForm {
+	.wrapper .webinarForm {
 		width: 100%;
 		max-width: 549px;
 		min-height: 0;
@@ -96,6 +96,10 @@
 
 	.webinarForm > div {
 		min-height: 0;
+	}
+
+	.webinarForm > div > div {
+		padding-top: 0;
 	}
 
 	.webinarForm h2 {
@@ -145,7 +149,7 @@
 		padding-bottom: 32px;
 	}
 
-	.webinarForm {
+	.wrapper .webinarForm {
 		max-width: 100%;
 	}
 }

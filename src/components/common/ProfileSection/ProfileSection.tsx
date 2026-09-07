@@ -30,13 +30,7 @@ function ProfileSection({
 				<h2 className={styles.title}>{title}</h2>
 
 				<div className={styles.card}>
-					<Image
-						className={styles.image}
-						src={image}
-						alt={name}
-						width={imageWidth}
-						height={imageHeight}
-					/>
+					<Image className={styles.image} src={image} alt={name} width={imageWidth} height={imageHeight} />
 
 					<div className={styles.info}>
 						<p className={styles.role}>{role}</p>
