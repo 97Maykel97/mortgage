@@ -1,0 +1,104 @@
+.header {
+	position: relative;
+	width: 100%;
+	min-height: 540px;
+	height: auto;
+	padding-bottom: 37px;
+	background: #fff url('/ebook-bg.png') center bottom / cover no-repeat;
+	overflow: visible;
+}
+
+.logo {
+	position: absolute;
+	top: 24px;
+	left: 100px;
+	width: 240px;
+	z-index: 1;
+}
+
+.heroContent {
+	width: 100%;
+	max-width: 430px;
+	margin: 0 auto;
+	padding-top: 276px;
+	text-align: left;
+}
+
+.heroContent {
+	transform: translateX(-90px);
+}
+
+.title {
+	margin: 0 0 21px;
+	max-width: 430px;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 1.25;
+	color: #fff;
+}
+
+.author {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+	color: #fff;
+	opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+	.header {
+		min-height: 480px;
+		padding-bottom: 32px;
+	}
+
+	.heroContent {
+		padding-top: 220px;
+		transform: none;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 600px) {
+	.header {
+		min-height: 420px;
+		padding-bottom: 28px;
+	}
+
+	.logo {
+		top: 30px;
+		left: 76px;
+		width: min(200px, calc(100% - 92px));
+	}
+
+	.heroContent {
+		padding-top: 180px;
+	}
+
+	.title {
+		margin-bottom: 18px;
+		font-size: 32px;
+		overflow-wrap: break-word;
+	}
+
+	.author {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+}
+
+@media (max-width: 375px) {
+	.header {
+		min-height: 380px;
+	}
+
+	.heroContent {
+		padding-top: 156px;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+}

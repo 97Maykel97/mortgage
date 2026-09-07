@@ -1,0 +1,45 @@
+.report {
+	max-width: 670px;
+	margin: 0 auto;
+}
+
+.title {
+	margin-top: 32px;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 167%;
+	color: #342f45;
+}
+
+.description {
+	max-width: 600px;
+	margin-top: 31px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 163%;
+	color: #000;
+}
+
+.item {
+	margin-top: 45px;
+}
+
+.itemTitle {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 100%;
+	color: #342f45;
+}
+
+.itemDescription {
+	margin-top: 20px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 171%;
+	color: #000;
+	opacity: 0.5;
+}
+
+.itemImage {
+	margin-top: 28px;
+}
